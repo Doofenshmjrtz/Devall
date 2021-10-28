@@ -1,0 +1,59 @@
+{
+    "vendor_module_example": {
+        "column": {
+            "id": true,
+            "name": true,
+            "description": true,
+            "is_enabled": true,
+            "weighing_factor": true,
+            "created_at": true,
+            "updated_at": true
+        }
+    },
+    "new_declarative_table": {
+        "column": {
+            "id": true,
+            "name": true,
+            "description": true,
+            "is_enabled": true,
+            "weighing_factor": true,
+            "created_at": true,
+            "updated_at": true,
+            "last_name": true
+        }
+    },
+    "company": {
+        "column": {
+            "id": true,
+            "name": true,
+            "last_name": true,
+            "description": true,
+            "is_enabled": true,
+            "weighing_factor": true,
+            "created_at": true,
+            "updated_at": true,
+            "created_in": true,
+            "updated_in": true,
+            "address": true,
+            "size": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "test_db": {
+        "column": {
+            "id": true,
+            "created_in": true,
+            "updated_in": true,
+            "name": true,
+            "address": true,
+            "size": true,
+            "description": true,
+            "is_enabled": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

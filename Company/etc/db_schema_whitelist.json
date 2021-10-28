@@ -1,0 +1,15 @@
+{
+    "company": {
+        "column": {
+            "entity_id": true,
+            "name": true,
+            "country": true,
+            "street": true,
+            "street_number": true,
+            "size": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="test_db">
+        <column name="id" xsi:type="int" padding="5" identity="true" unsigned="true" nullable="false" comment="entity_id"></column>
+        <column name="created_in" xsi:type="timestamp" default="CURRENT_TIMESTAMP" comment="Created At"></column>
+        <column name="updated_in" xsi:type="timestamp" default="CURRENT_TIMESTAMP" on_update="true" comment="Updated At"></column>
+        <column name="name" xsi:type="varchar" nullable="true" length="124" comment="Company Name"></column>
+        <column name="address" xsi:type="varchar" nullable="true" length="124" comment="Company Address"></column>
+        <column name="size" xsi:type="smallint" unsigned="true" nullable="true" comment="Size of Company"></column>
+        <column name="description" xsi:type="text" nullable="true"></column>
+        <column name="is_enabled" xsi:type="boolean" nullable="false" default="0"></column>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>
+</schema>

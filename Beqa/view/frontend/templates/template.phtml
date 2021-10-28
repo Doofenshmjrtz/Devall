@@ -1,0 +1,12 @@
+<?php
+use Magento\Framework\View\Element\Template;
+/** @var Template $block */
+
+$viewModel = $block->getData("view_model");
+
+?>
+<body>
+    <?= $block->getData("passedFromBlock") ?><br>
+    <?= $viewModel->pass("This string is passed from the View Model") ?><br>
+    <?= $block->getData('passedFromController') ?>
+</body>
