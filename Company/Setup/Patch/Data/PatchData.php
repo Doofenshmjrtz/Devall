@@ -28,7 +28,7 @@ class PatchData implements DataPatchInterface, PatchVersionInterface
         //Install data row into contact_details table
         $this->moduleDataSetup->startSetup();
         $company = $this->companyFactory->create();
-        $company->setName('Company N2');
+        $company->setName('Company N4');
         $company->setSize('17');
         $company->setCountry('Georgia');
         $company->setStreet('Betlemi Street');

@@ -1,0 +1,59 @@
+<?php
+/** @var Devall\Company\Block\SelectCompany $block */
+/** @var Escaper $escaper */
+use Magento\Framework\Escaper;
+$companies = $block->getCompanies();
+?>
+<form method="post" id="companyform" action="<?= $block->escapeUrl($block->getAction()) ?>">
+    <?= $block->getBlockHtml('form_key') ?>
+    <select name="company" id="company">
+        <?php foreach ($companies as $company): ?>
+            <option
+                value="<?= $company->getId() ?>" <?php if ($company->getId() == $block->getCurrentCompanyId()): ?> selected <?php endif; ?>>
+                <?= $company->getName() ?>
+            </option>
+        <?php endforeach; ?>
+    </select>
+    <br>
+    <br>
+    <div class="primary">
+        <button type="submit"
+                class="action save primary"
+                title="<?= $block->escapeHtmlAttr(__('Save Company')) ?>">
+            <span><?= $block->escapeHtml(__('Save')) ?></span>
+        </button>
+    </div>
+</form>
+<div id="company-div" data-bind="scope: 'company-details'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
+
+
+
+
+
+
+<!--<form>-->
+<!--    <label class="control" for="company">Company</label>-->
+<!---->
+<!--    <select class="control" id="company">-->
+<!--        --><?php
+//            foreach ($block->getCollection() as $company)
+//                echo "<option>" . $company['name'] . '</option>';
+//        ?>
+<!--    </select>-->
+<!--</form>-->
+<!--<br>-->
+<!--<br>-->
+<!--<div class="actions-toolbar">-->
+<!--    <div class="primary">-->
+<!--        <button type="submit"-->
+<!--                class="action save primary"-->
+<!--                data-action="save-company"-->
+<!--                formmethod="post"-->
+<!--                title="--><?//= $escaper->escapeHtmlAttr(__('Save Company')) ?><!--">-->
+<!--            <span>--><?//= $escaper->escapeHtml(__('Save')) ?><!--</span>-->
+<!--        </button>-->
+<!--    </div>-->
+<!--</div>-->

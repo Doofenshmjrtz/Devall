@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock class="Magento\Framework\View\Element\Template" name="sidebar.main.account_nav" template="Magento_Theme::html/collapsible.phtml" >
+            <arguments>
+                <argument name="block_css" xsi:type="string">account-nav</argument>
+            </arguments>
+            <referenceBlock class="Magento\Customer\Block\Account\Navigation" name="customer_account_navigation" >
+                <arguments>
+                    <argument name="css_class" xsi:type="string">nav items</argument>
+                </arguments>
+                <block class="Magento\Customer\Block\Account\SortLinkInterface" name="customer-account-company-information">
+                    <arguments>
+                        <argument name="label" xsi:type="string" translate="true">Company Information</argument>
+                        <argument name="path" xsi:type="string">company/customer/edit</argument>
+                        <argument name="sortOrder" xsi:type="number">200</argument>
+                    </arguments>
+                </block>
+            </referenceBlock>
+        </referenceBlock>
+    </body>
+</page>

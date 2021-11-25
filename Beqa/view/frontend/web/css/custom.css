@@ -1,0 +1,16 @@
+/*h1.page-title {*/
+/*    display: flex;*/
+/*    justify-content: space-around;*/
+/*    color: red;*/
+/*}*/
+.header.content li {
+    float: right;
+    list-style-type: none;
+}
+.header.content li a {
+    color: grey;
+}
+.header.content li a:hover {
+    color: dimgrey;
+    text-decoration: none;
+}

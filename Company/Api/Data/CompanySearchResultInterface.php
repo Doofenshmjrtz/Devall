@@ -7,12 +7,12 @@ use Magento\Framework\Api\SearchResultsInterface;
 interface CompanySearchResultInterface extends SearchResultsInterface
 {
     /**
-     * @return \Devall\Company\Api\Data\CompanyInterface[]
+     * @return CompanyInterface[]
      */
     public function getItems(): array;
 
     /**
-     * @param \Devall\Company\Api\Data\CompanyInterface[] $items
+     * @param CompanyInterface[] $items
      * @return void
      */
     public function setItems(array $items);

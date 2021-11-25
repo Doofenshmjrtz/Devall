@@ -7,7 +7,10 @@ use Magento\Framework\Model\AbstractExtensibleModel;
 
 class Company extends AbstractExtensibleModel implements CompanyInterface
 {
-    //const COMPANY_ATTRIBUTE_CODE = 'devall_company';
+    /**
+     * Customer attribute code
+     */
+    const COMPANY_ATTRIBUTE_CODE = 'customer_pan_number';
 
     protected function _construct()
     {
@@ -30,7 +33,7 @@ class Company extends AbstractExtensibleModel implements CompanyInterface
         $this->setData(self::ENTITY_ID, $id);
     }
 
-    public function getName()
+    public function getName(): string
     {
         return $this->_getData(self::NAME);
     }

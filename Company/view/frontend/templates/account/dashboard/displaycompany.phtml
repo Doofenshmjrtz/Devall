@@ -1,0 +1,29 @@
+<?php
+/** @var CompanyBlock $block */
+
+use Devall\Company\Block\Account\Dashboard\CompanyBlock;
+
+?>
+<div class="block block-dashboard-company">
+    <div class="block-title">
+        <strong><?= $block->escapeHtml(__('Company Information')) ?></strong>
+        <a class="action edit" href="<?= $block->escapeUrl($block->getCompanyEditUrl() ) ?>"><span><?= $block->escapeHtml(__('Change Associated Company')) ?></span></a>
+
+    </div>
+    <div class="block-content">
+        <?php if ($block->hasCompany()) : ?>
+            <div class="box">
+                <strong class="box-title">
+                    <span><?= $block->getName() ?></span>
+                </strong>
+                <div class="box-content">
+                    <p>
+                        <?= $block->getCountry() ?><br>
+                        <?= $block->getStreet() ?><br>
+                        <?= $block->getNumber() ?>
+                    </p>
+                </div>
+            </div>
+        <?php endif; ?>
+    </div>
+</div>

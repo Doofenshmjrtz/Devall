@@ -1,8 +1,8 @@
 <?php
 
-namespace Devall\Beqa\Block;
+namespace Devall\Beqa\Controller\Block;
 
-class Link extends \Magento\Framework\View\Element\Html\Link
+class link extends \Magento\Framework\View\Element\Html\Link
 {
     protected function _toHtml()
     {

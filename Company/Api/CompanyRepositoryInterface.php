@@ -12,3 +12,4 @@ interface CompanyRepositoryInterface
 
     public function getList(\Magento\Framework\Api\SearchCriteriaInterface $searchCriteria);
 }
+
